@@ -31,7 +31,7 @@ var addTwoNumbers = function(l1, l2) {
     l1.val -= 10
     l1.next ? l1.next.val++ : l1.next = new ListNode(1)
   }
-  
+
   if (l2 && l2.val >= 10) {
     l2.val -= 10
     l2.next ? l2.next.val++ : l2.next = new ListNode(1)  
@@ -59,7 +59,6 @@ var addTwoNumbers = function(l1, l2) {
   curr.next = addTwoNumbers(l1.next || new ListNode(0), l2.next || new ListNode(0))
   return curr
 };
-
 
 const res = addTwoNumbers(LinkedListA.head, LinkedListB.head)
 console.log(res)
